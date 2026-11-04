@@ -44,5 +44,3 @@
 Связь: [Telegram @anrhangels](https://t.me/anrhangels), Discord — `anrhangels`.
 
 </details>
-
-<p align="center"><sub>Работа над проектами и оформлением велась с помощью ИИ — OpenAI Codex GPT-6.1-Sol.</sub></p>
