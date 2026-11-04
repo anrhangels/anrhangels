@@ -12,9 +12,9 @@
 
 <p><a href="https://github.com/anrhangels/milo-home"><img src="assets/milo.png" width="100%" alt="01 — Milo Home. Простой домашний экран для Android TV и Google TV: приложения, пульт и меньше лишнего. На основе CleanYourTV; собственные выпуски и инструкции. Открыть проект."></a></p>
 
-<p><a href="https://github.com/anrhangels/linux-arizona-rp"><img src="assets/arizona.png" width="100%" alt="02 — Arizona RP на Linux. Установка, официальный лаунчер, русский текст и эмодзи. Игровой запуск проверялся. Инструкции и настройка — в репозитории. Открыть репозиторий."></a></p>
+<p><a href="https://github.com/anrhangels/linux-arizona-rp"><img src="assets/arizona-v2.png" width="100%" alt="02 — Arizona RP на Linux. Установка, официальный лаунчер, русский текст и эмодзи. Игровой запуск проверялся. Инструкции и настройка — в репозитории. Открыть репозиторий."></a></p>
 
-<p><a href="https://github.com/anrhangels/linux-radmir-rp"><img src="assets/radmir.png" width="100%" alt="03 — Radmir CRMP на Linux. Установка, библиотеки для графики и помощник музыки. Игровой запуск проверялся. Инструкции и настройка — в репозитории. Открыть репозиторий."></a></p>
+<p><a href="https://github.com/anrhangels/linux-radmir-rp"><img src="assets/radmir-v2.png" width="100%" alt="03 — Radmir CRMP на Linux. Установка, библиотеки для графики и помощник музыки. Игровой запуск проверялся. Инструкции и настройка — в репозитории. Открыть репозиторий."></a></p>
 
 <p><a href="https://github.com/anrhangels/linux-amazing-rp"><img src="assets/amazing.png" width="100%" alt="04 — Amazing Online на Linux. Запуск игры не достигнут. Технический отчёт о проведённых тестах, ошибках и выводах. Открыть отчёт."></a></p>
 

@@ -68,10 +68,11 @@ def contact_card(c,label,handle,action):
 def telegram(c):contact_card(c,'TELEGRAM','@anrhangels','Нажмите, чтобы открыть чат  ↗')
 def discord(c):contact_card(c,'DISCORD','anrhangels','Найдите по имени пользователя')
 for name,h,fn in [('header',363,header),('about',315,about),('projects',135,projects),('milo',219,milo),('arizona',219,arizona),('radmir',219,radmir),('amazing',219,amazing),('contact',110,contact),('telegram',170,telegram),('discord',170,discord)]:
+ output_name = name + '-v2' if name in ('arizona', 'radmir') else name
  for ext in ['png','svg']:
   width=588 if name in ('telegram','discord') else 1200
-  surface=cairo.SVGSurface(str(P/(name+'.svg')),width,h) if ext=='svg' else cairo.ImageSurface(cairo.FORMAT_ARGB32,width,h)
+  surface=cairo.SVGSurface(str(P/(output_name+'.svg')),width,h) if ext=='svg' else cairo.ImageSurface(cairo.FORMAT_ARGB32,width,h)
   fn(cairo.Context(surface))
-  if ext=='png':surface.write_to_png(str(P/(name+'.png')))
+  if ext=='png':surface.write_to_png(str(P/(output_name+'.png')))
   surface.finish()
 print('Created 10 PNG cards and editable SVG copies.')
