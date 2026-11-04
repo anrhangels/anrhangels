@@ -38,11 +38,11 @@ def header(c):
  text(c,'LINUX / GAMES / AI',905,312,17,MUTED,True)
 def about(c):
  base(c,315);text(c,'01 / ABOUT',38,43,16,MUTED,True);rule(c,38,65,1124)
- text(c,'Начинаю с интереса, учусь на практике.',38,112,30,INK,False,True)
- for y,s in [(159,'Я новичок в Linux и коде. Настраиваю систему под себя,'),(194,'пробую запускать любимые игры и записываю результаты.'),(243,'Использую ИИ для обучения: разбираю объяснения и ошибки.'),(278,'Здесь делюсь тем, что получилось, и тем, что ещё не работает.')]:text(c,s,38,y,24,MUTED)
+ text(c,'Осваиваю Linux и делаю свои проекты.',38,112,30,INK,False,True)
+ for y,s in [(159,'Я новичок в Linux и коде. Настраиваю систему под себя,'),(194,'работаю над Milo Home и пробую запускать игры на Linux.'),(243,'Использую ИИ для обучения: разбираю объяснения и ошибки.'),(278,'Здесь делюсь тем, что получилось, и тем, что ещё не работает.')]:text(c,s,38,y,24,MUTED)
 def projects(c):
  base(c,135);text(c,'02 / PROJECTS',38,42,16,MUTED,True)
- text(c,'Мои заметки превратились в проекты.',38,91,29,INK,False,True)
+ text(c,'Для домашнего экрана и любимых игр.',38,91,29,INK,False,True)
 def project(c,index,title,status,desc,foot,co):
  base(c,219);box(c,0,18,4,183,co)
  text(c,index,31,49,17,MUTED,True)
@@ -52,17 +52,26 @@ def project(c,index,title,status,desc,foot,co):
  text(c,desc,100,151,23,MUTED)
  text(c,foot,100,190,18,MUTED)
  text(c,'↗',1125,53,30,INK)
-def arizona(c):project(c,'01','Arizona RP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, официальный лаунчер, русский текст и эмодзи.','Новый установщик ещё не проверен целиком с нуля.','#A5B9AA')
-def radmir(c):project(c,'02','Radmir CRMP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, библиотеки для графики и помощник музыки.','Новый установщик ещё не проверен целиком с нуля.','#A5B9AA')
-def amazing(c):project(c,'03','Amazing Online на Linux','ЗАПУСК ИГРЫ НЕ ДОСТИГНУТ','Технический отчёт: проведённые тесты, ошибки и выводы.','Сохранил результат неудачной попытки, чтобы он был полезен.','#C8B28C')
+def milo(c):project(c,'01','Milo Home','ANDROID TV / GOOGLE TV','Простой домашний экран: приложения, пульт и меньше лишнего.','На основе CleanYourTV. Собственные выпуски и инструкции.','#B7C6CF')
+def arizona(c):project(c,'02','Arizona RP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, официальный лаунчер, русский текст и эмодзи.','Новый установщик ещё не проверен целиком с нуля.','#A5B9AA')
+def radmir(c):project(c,'03','Radmir CRMP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, библиотеки для графики и помощник музыки.','Новый установщик ещё не проверен целиком с нуля.','#A5B9AA')
+def amazing(c):project(c,'04','Amazing Online на Linux','ЗАПУСК ИГРЫ НЕ ДОСТИГНУТ','Технический отчёт: проведённые тесты, ошибки и выводы.','Сохранил результат неудачной попытки, чтобы он был полезен.','#C8B28C')
 def contact(c):
- base(c,149);text(c,'03 / CONTACT',38,41,16,MUTED,True);rule(c,38,62,1124)
- text(c,'Discord',38,108,22,MUTED,True);text(c,'anrhangels',180,108,28,INK,True,True)
- text(c,'Буду рад обмену опытом.',766,108,23,MUTED)
-for name,h,fn in [('header',363,header),('about',315,about),('projects',135,projects),('arizona',219,arizona),('radmir',219,radmir),('amazing',219,amazing),('contact',149,contact)]:
+ base(c,110);text(c,'03 / CONTACT',38,42,16,MUTED,True)
+ text(c,'Есть вопрос или идея? Можно написать.',38,86,28,INK,False,True)
+def contact_card(c,label,handle,action):
+ box(c,0,0,588,170,BG,16)
+ text(c,label,28,44,19,MUTED,True)
+ rule(c,28,64,532)
+ text(c,handle,28,115,31,INK,True,True)
+ text(c,action,28,148,16,MUTED)
+def telegram(c):contact_card(c,'TELEGRAM','@anrhangels','Нажмите, чтобы открыть чат  ↗')
+def discord(c):contact_card(c,'DISCORD','anrhangels','Найдите по имени пользователя')
+for name,h,fn in [('header',363,header),('about',315,about),('projects',135,projects),('milo',219,milo),('arizona',219,arizona),('radmir',219,radmir),('amazing',219,amazing),('contact',110,contact),('telegram',170,telegram),('discord',170,discord)]:
  for ext in ['png','svg']:
-  surface=cairo.SVGSurface(str(P/(name+'.svg')),1200,h) if ext=='svg' else cairo.ImageSurface(cairo.FORMAT_ARGB32,1200,h)
+  width=588 if name in ('telegram','discord') else 1200
+  surface=cairo.SVGSurface(str(P/(name+'.svg')),width,h) if ext=='svg' else cairo.ImageSurface(cairo.FORMAT_ARGB32,width,h)
   fn(cairo.Context(surface))
   if ext=='png':surface.write_to_png(str(P/(name+'.png')))
   surface.finish()
-print('Created 7 PNG cards and editable SVG copies.')
+print('Created 10 PNG cards and editable SVG copies.')
