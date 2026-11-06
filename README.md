@@ -18,6 +18,8 @@
 
 <p><a href="https://github.com/anrhangels/linux-amazing-rp"><img src="assets/amazing.png" width="100%" alt="04 — Amazing Online на Linux. Запуск игры не достигнут. Технический отчёт о проведённых тестах, ошибках и выводах. Открыть отчёт."></a></p>
 
+<p><a href="https://github.com/anrhangels/linux-advance-rp"><img src="assets/advance.png" width="100%" alt="05 — Advance RP на Linux. Проверены вход на сервер, управление, русский ввод, шрифты и Full HD. Официальный лаунчер и скрипт настройки. Открыть репозиторий."></a></p>
+
 <a id="контакт"></a>
 
 <p><img src="assets/contact.png" width="100%" alt="Связаться: есть вопрос или идея — можно написать."></p>
@@ -39,7 +41,9 @@
 - [Radmir CRMP на Linux](https://github.com/anrhangels/linux-radmir-rp) — инструкция, графика и помощник музыки.
 - [Amazing Online на Linux](https://github.com/anrhangels/linux-amazing-rp) — отчёт о неудачной попытке запуска.
 
-Игровые запуски Arizona и Radmir проверялись на нашей системе. Подробности и ограничения — в документации каждого проекта.
+- [Advance RP на Linux](https://github.com/anrhangels/linux-advance-rp) — инструкция, шрифты, русский ввод и Full HD.
+
+Игровые запуски Arizona, Radmir и Advance проверялись на нашей системе. Подробности и ограничения — в документации каждого проекта.
 
 Связь: [Telegram @anrhangels](https://t.me/anrhangels), Discord — `anrhangels`.
 

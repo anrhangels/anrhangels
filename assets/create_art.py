@@ -56,6 +56,7 @@ def milo(c):project(c,'01','Milo Home','ANDROID TV / GOOGLE TV','Простой 
 def arizona(c):project(c,'02','Arizona RP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, официальный лаунчер, русский текст и эмодзи.','Пошаговая инструкция и скрипт настройки.','#A5B9AA')
 def radmir(c):project(c,'03','Radmir CRMP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, библиотеки для графики и помощник музыки.','Графика, музыка и запуск одной командой.','#A5B9AA')
 def amazing(c):project(c,'04','Amazing Online на Linux','ЗАПУСК ИГРЫ НЕ ДОСТИГНУТ','Технический отчёт: проведённые тесты, ошибки и выводы.','Сохранил результат неудачной попытки, чтобы он был полезен.','#C8B28C')
+def advance(c):project(c,'05','Advance RP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЕН','Установка, русский ввод, шрифты и Full HD.','Официальный лаунчер и скрипт настройки.','#A5B9AA')
 def contact(c):
  base(c,110);text(c,'03 / CONTACT',38,42,16,MUTED,True)
  text(c,'Есть вопрос или идея? Можно написать.',38,86,28,INK,False,True)
@@ -67,7 +68,8 @@ def contact_card(c,label,handle,action):
  text(c,action,28,148,16,MUTED)
 def telegram(c):contact_card(c,'TELEGRAM','@anrhangels','Нажмите, чтобы открыть чат  ↗')
 def discord(c):contact_card(c,'DISCORD','anrhangels','Найдите по имени пользователя')
-for name,h,fn in [('header',363,header),('about',315,about),('projects',135,projects),('milo',219,milo),('arizona',219,arizona),('radmir',219,radmir),('amazing',219,amazing),('contact',110,contact),('telegram',170,telegram),('discord',170,discord)]:
+for name,h,fn in [('header',363,header),('about',315,about),('projects',135,projects),('milo',219,milo),('arizona',219,arizona),('radmir',219,radmir),('amazing',219,amazing),('advance',219,advance),('contact',110,contact),('telegram',170,telegram),('discord',170,discord)]:
+ if __import__('sys').argv[1:] and name not in __import__('sys').argv[1:]:continue
  output_name = name + '-v2' if name in ('arizona', 'radmir') else name
  for ext in ['png','svg']:
   width=588 if name in ('telegram','discord') else 1200
@@ -75,4 +77,4 @@ for name,h,fn in [('header',363,header),('about',315,about),('projects',135,proj
   fn(cairo.Context(surface))
   if ext=='png':surface.write_to_png(str(P/(output_name+'.png')))
   surface.finish()
-print('Created 10 PNG cards and editable SVG copies.')
+print('Created selected PNG cards and editable SVG copies.')
