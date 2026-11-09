@@ -4,7 +4,7 @@
 
 <a id="обо-мне"></a>
 
-<p><img src="assets/about.png" width="100%" alt="Я новичок в Linux и коде. Настраиваю систему, работаю над Milo Home и пробую запускать игры на Linux. Использую ИИ для обучения: разбираю объяснения и ошибки. Делюсь тем, что получилось, и тем, что пока не работает."></p>
+<p><img src="assets/about.png" width="100%" alt="Я новичок в Linux и коде. Настраиваю систему, работаю над Milo Home и запускаю игры на Linux. Использую ИИ для обучения: разбираю объяснения и ошибки. Делюсь тем, что получилось, и тем, что пока не работает."></p>
 
 <a id="проекты"></a>
 
@@ -16,7 +16,7 @@
 
 <p><a href="https://github.com/anrhangels/linux-radmir-rp"><img src="assets/radmir-v2.png" width="100%" alt="03 — Radmir CRMP на Linux. Установка, библиотеки для графики и помощник музыки. Игровой запуск проверялся. Инструкции и настройка — в репозитории. Открыть репозиторий."></a></p>
 
-<p><a href="https://github.com/anrhangels/linux-amazing-rp"><img src="assets/amazing.png" width="100%" alt="04 — Amazing Online на Linux. Запуск игры не достигнут. Технический отчёт о проведённых тестах, ошибках и выводах. Открыть отчёт."></a></p>
+<p><a href="https://github.com/anrhangels/linux-amazing-rp"><img src="assets/amazing-v2.png" width="100%" alt="04 — Amazing Online на Linux. Клиент запущен, сервер подключён. Лаунчер, игровой мир, русский интерфейс и автоматическая настройка экрана. Открыть инструкции и скрипты."></a></p>
 
 <p><a href="https://github.com/anrhangels/linux-advance-rp"><img src="assets/advance.png" width="100%" alt="05 — Advance RP на Linux. Проверены вход на сервер, управление, русский ввод, шрифты и Full HD. Официальный лаунчер и скрипт настройки. Открыть репозиторий."></a></p>
 
@@ -39,11 +39,11 @@
 - [Milo Home](https://github.com/anrhangels/milo-home) — простой домашний экран для Android TV / Google TV, основанный на CleanYourTV.
 - [Arizona RP на Linux](https://github.com/anrhangels/linux-arizona-rp) — инструкция и автоматическая настройка.
 - [Radmir CRMP на Linux](https://github.com/anrhangels/linux-radmir-rp) — инструкция, графика и помощник музыки.
-- [Amazing Online на Linux](https://github.com/anrhangels/linux-amazing-rp) — отчёт о неудачной попытке запуска.
+- [Amazing Online на Linux](https://github.com/anrhangels/linux-amazing-rp) — запуск клиента, подключение к серверу, единый установщик и автоматический выбор экрана.
 
 - [Advance RP на Linux](https://github.com/anrhangels/linux-advance-rp) — инструкция, шрифты, русский ввод и Full HD.
 
-Игровые запуски Arizona, Radmir и Advance проверялись на нашей системе. Подробности и ограничения — в документации каждого проекта.
+Arizona, Radmir, Advance и Amazing запускаются в подготовленных окружениях Linux. В репозиториях — скрипты, пошаговые инструкции и разбор найденных ошибок.
 
 Связь: [Telegram @anrhangels](https://t.me/anrhangels), Discord — `anrhangels`.
 

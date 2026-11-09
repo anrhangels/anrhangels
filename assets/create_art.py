@@ -39,7 +39,7 @@ def header(c):
 def about(c):
  base(c,315);text(c,'01 / ABOUT',38,43,16,MUTED,True);rule(c,38,65,1124)
  text(c,'Осваиваю Linux и делаю свои проекты.',38,112,30,INK,False,True)
- for y,s in [(159,'Я новичок в Linux и коде. Настраиваю систему под себя,'),(194,'работаю над Milo Home и пробую запускать игры на Linux.'),(243,'Использую ИИ для обучения: разбираю объяснения и ошибки.'),(278,'Здесь делюсь тем, что получилось, и тем, что ещё не работает.')]:text(c,s,38,y,24,MUTED)
+ for y,s in [(159,'Я новичок в Linux и коде. Настраиваю систему под себя,'),(194,'работаю над Milo Home и запускаю игры на Linux.'),(243,'Использую ИИ для обучения: разбираю объяснения и ошибки.'),(278,'Здесь делюсь тем, что получилось, и тем, что ещё не работает.')]:text(c,s,38,y,24,MUTED)
 def projects(c):
  base(c,135);text(c,'02 / PROJECTS',38,42,16,MUTED,True)
  text(c,'Для домашнего экрана и любимых игр.',38,91,29,INK,False,True)
@@ -55,7 +55,7 @@ def project(c,index,title,status,desc,foot,co):
 def milo(c):project(c,'01','Milo Home','ANDROID TV / GOOGLE TV','Простой домашний экран: приложения, пульт и меньше лишнего.','На основе CleanYourTV. Собственные выпуски и инструкции.','#B7C6CF')
 def arizona(c):project(c,'02','Arizona RP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, официальный лаунчер, русский текст и эмодзи.','Пошаговая инструкция и скрипт настройки.','#A5B9AA')
 def radmir(c):project(c,'03','Radmir CRMP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЯЛСЯ','Установка, библиотеки для графики и помощник музыки.','Графика, музыка и запуск одной командой.','#A5B9AA')
-def amazing(c):project(c,'04','Amazing Online на Linux','ЗАПУСК ИГРЫ НЕ ДОСТИГНУТ','Технический отчёт: проведённые тесты, ошибки и выводы.','Сохранил результат неудачной попытки, чтобы он был полезен.','#C8B28C')
+def amazing(c):project(c,'04','Amazing Online на Linux','КЛИЕНТ ЗАПУЩЕН · СЕРВЕР ПОДКЛЮЧЁН','Лаунчер, игровой мир и форма входа работают на Linux.','Скрипт запуска, выбор экрана и проверенные исправления.','#A5B9AA')
 def advance(c):project(c,'05','Advance RP на Linux','ИГРОВОЙ ЗАПУСК ПРОВЕРЕН','Установка, русский ввод, шрифты и Full HD.','Официальный лаунчер и скрипт настройки.','#A5B9AA')
 def contact(c):
  base(c,110);text(c,'03 / CONTACT',38,42,16,MUTED,True)
@@ -70,7 +70,7 @@ def telegram(c):contact_card(c,'TELEGRAM','@anrhangels','Нажмите, что�
 def discord(c):contact_card(c,'DISCORD','anrhangels','Найдите по имени пользователя')
 for name,h,fn in [('header',363,header),('about',315,about),('projects',135,projects),('milo',219,milo),('arizona',219,arizona),('radmir',219,radmir),('amazing',219,amazing),('advance',219,advance),('contact',110,contact),('telegram',170,telegram),('discord',170,discord)]:
  if __import__('sys').argv[1:] and name not in __import__('sys').argv[1:]:continue
- output_name = name + '-v2' if name in ('arizona', 'radmir') else name
+ output_name = name + '-v2' if name in ('arizona', 'radmir', 'amazing') else name
  for ext in ['png','svg']:
   width=588 if name in ('telegram','discord') else 1200
   surface=cairo.SVGSurface(str(P/(output_name+'.svg')),width,h) if ext=='svg' else cairo.ImageSurface(cairo.FORMAT_ARGB32,width,h)
